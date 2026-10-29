@@ -1,0 +1,11 @@
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.bg-stars {
+  background-image: radial-gradient(white 1px, transparent 0);
+  background-size: 50px 50px;
+  opacity: 0.2;
+  animation: moveStars 100s linear infinite;
+}
