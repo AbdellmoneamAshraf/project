@@ -12,49 +12,50 @@
 
 <body class="bg-slate-950 text-white min-h-screen relative overflow-x-hidden">
     <div
-        class="fixed top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse -z-1">
+        class="fixed top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse -z-10">
     </div>
-    <div class="fixed inset-0 pointer-events-none -z-1 bg-stars"></div>
+    <div class="fixed inset-0 pointer-events-none -z-10 bg-stars"></div>
     <div
-        class="fixed top-1/3 right-10 w-80 h-80 bg-blue-600/15 rounded-full blur-[100px] pointer-events-none animate-pulse delay-1000 -z-1">
+        class="fixed top-1/3 right-10 w-80 h-80 bg-blue-600/15 rounded-full blur-[100px] pointer-events-none animate-pulse delay-1000 -z-10">
     </div>
-    <header
-        class="flex justify-between m-5 mx-60 px-10 p-5 text-gray-500 rounded-2xl bg-gray-100/10 sticky top-5 backdrop-blur-md  z-1">
-        <div class="header-site text-2xl">
-            <h1>Landia</h1>
-        </div>
-        <div class="flex gap-5 ">
-            <a class="hover:text-blue-500 hover:shadow hover:rounded-xl p-2 transition-all duration-300"
-                href="">Home</a>
-            <a class="hover:text-blue-500 hover:shadow hover:rounded-xl p-2 transition-all duration-300"
-                href="">About</a>
-            <a class="hover:text-blue-500 hover:shadow hover:rounded-xl p-2 transition-all duration-300"
-                href="">pricing</a>
-            <a class="hover:text-blue-500 hover:shadow hover:rounded-xl p-2 transition-all duration-300"
-                href="">Features</a>
-            <a class="hover:text-blue-500 hover:shadow hover:rounded-xl p-2 transition-all duration-300"
-                href="">contact</a>
+
+    <header id="home" class="sticky top-5 z-20 mx-auto mt-5 max-w-7xl rounded-2xl border border-white/10 bg-slate-900/60 px-4 py-3 backdrop-blur-md sm:px-6 lg:px-10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div class="header-site text-2xl font-bold tracking-tight text-white">
+                <h1 class="m-0">Landia</h1>
+            </div>
+            <nav class="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-300 sm:gap-3 lg:gap-5">
+                <a class="rounded-xl p-2 transition-all duration-300 hover:text-blue-500 hover:shadow" href="#home">Home</a>
+                <a class="rounded-xl p-2 transition-all duration-300 hover:text-blue-500 hover:shadow" href="#about">About</a>
+                <a class="rounded-xl p-2 transition-all duration-300 hover:text-blue-500 hover:shadow" href="#pricing">Pricing</a>
+                <a class="rounded-xl p-2 transition-all duration-300 hover:text-blue-500 hover:shadow" href="#features">Features</a>
+                <a class="rounded-xl p-2 transition-all duration-300 hover:text-blue-500 hover:shadow" href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
-    <header class="page-header">
-        <div class="text-center m-10 p-5 flex flex-col gap-10">
-            <h1 class="font-bold text-2xl font-serif">UI components to help you build even faster</h1>
-            <p class="font-serif text-gray-600 px-25">Say goodbye to over-engineered and bloated templates and
+
+    <header class="page-header" id="about">
+        <div class="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10 text-center sm:px-6 lg:px-8">
+            <h1 class="font-bold text-2xl font-serif sm:text-3xl lg:text-5xl">UI components to help you build even faster</h1>
+            <p class="font-serif text-gray-600 sm:text-lg lg:px-20">Say goodbye to over-engineered and bloated templates and
                 themes! We're excited to introduce our new and improved system for creating landing pages,
                 dashboards, and e-commerce templates using our UI components.</p>
         </div>
     </header>
-    <section>
-        <div class=" section-one mx-50 p-10 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:gap-10 lg:gap-12 gap-4">
+
+    <section id="pricing">
+        <div class="section-one mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-6 sm:px-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10 lg:px-8">
         </div>
     </section>
-    <section class="section2">
-        <div class="header mx-50 font-bold text-2xl">
+
+    <section class="section2 py-10">
+        <div class="header mx-auto max-w-7xl px-4 pb-6 text-2xl font-bold sm:px-6 lg:px-8">
             <h2>Testimonials Components</h2>
         </div>
-        <div class=" imgs mx-50 p-10 grid  md:grid-cols-1 lg:grid-cols-2 grid-cols-1 md:gap-10 lg:gap-12 gap-4"></div>
+        <div class="imgs mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 sm:px-6 md:grid-cols-2 md:gap-8 lg:grid-cols-2 lg:gap-10 lg:px-8"></div>
     </section>
-    <section class="py-10">
+
+    <section id="features" class="py-10">
         <div class="text-center mb-10 px-4">
             <h2 class="font-bold text-3xl text-white font-serif">Features</h2>
             <p class="mt-4 text-gray-600 font-serif">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
