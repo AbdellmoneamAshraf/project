@@ -120,6 +120,24 @@ function changeFeature(id) {
 const productconainer = document.querySelector(".section-one");
 const productconainer2 = document.querySelector(".imgs");
 
+const menuToggle = document.querySelector("#menu-toggle");
+const siteNavigation = document.querySelector("#site-navigation");
+
+menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation menu" : "Close navigation menu");
+    siteNavigation.classList.toggle("hidden", isExpanded);
+});
+
+siteNavigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        siteNavigation.classList.add("hidden");
+    });
+});
+
 featureButtons.innerHTML = datels.map(feature => `
     <button type="button" data-id="${feature.idd}" onclick="changeFeature(${feature.idd})"
         class="flex w-full items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 text-left transition-all duration-300 hover:border-slate-300 hover:bg-white">
